@@ -1,0 +1,23 @@
+---
+import seccions from "../../seccionsPost.json";
+
+---
+
+{
+  seccions.map((seccion) => (
+    
+    <div class="bg-slate-600  rounded-md   p-5 hover:bg-slate-500">
+      <a href={seccion.url}>
+      <div>
+         <h2 class="text-3xl ">{seccion.title} </h2>
+       
+        <p>{seccion.body}</p>
+      </div>
+      <div class="flex gap-8 ">
+        <img class=" w-20" src={seccion.frontPhoto} alt="portada del post" />
+        <p>{seccion.tags}</p>
+        </div>
+      </a>
+    </div>
+  ))
+}

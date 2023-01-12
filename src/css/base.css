@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  
+  h1 {
+    @apply text-4xl  text-orange-700  py-2;
+  }
+  h2 {
+    @apply text-3xl text-orange-700 py-2;
+  }
+  h3 {
+    @apply text-2xl text-orange-700;
+  }
+  p{
+    @apply text-white mb-5 text-xl
+  }
+
+}

@@ -1,0 +1,18 @@
+---
+import Undrawpic from "../assets/undrawpic.svg";
+interface Props {
+  titulo?: string;
+  descripcion?: string;
+}
+const { titulo, descripcion } = Astro.props;
+---
+
+<seccion class="flex flex-col md:flex-row gap-5 items-center md:max-h-96 rounded-xl bg-gray-700">
+  <div class="flex-1 p-3 text-left md:pl-32">
+    <h2 class="text-4xl font-bold">{titulo}</h2>
+    <p class="text-yellow-600 text-2xl mt-4">{descripcion}</p>
+  </div>
+  <div class="flex-1 pb-5"> 
+    <img class="w-3/5 mx-auto" src={Undrawpic} alt="imagen" />
+  </div>
+</seccion>

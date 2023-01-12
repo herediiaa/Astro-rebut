@@ -1,0 +1,22 @@
+---
+interface Props{
+    dato: string
+}
+const {dato} = Astro.props
+import PostsShowSeccion from "./PostsShowSeccion.astro";
+
+---
+<section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+<div class="bg-red-500 rounded-t-xl">
+        <h2 class="text-3xl text-white  p-3  text-center font-semibold">Basic Seccion</h2>
+        <PostsShowSeccion dato={dato} variable='basic'/>
+    </div>
+    <div class="bg-yellow-900  rounded-t-xl">
+        <h2 class="text-3xl text-white  p-3  text-center">intermediate Seccion</h2>
+        <PostsShowSeccion  dato={dato} variable='intermediate'/>
+    </div>
+    <div class="bg-green-800  rounded-t-xl">
+        <h2 class="text-3xl text-white  p-3 text-center">Advance Seccion</h2>
+        <PostsShowSeccion dato={dato} variable='advance'/>
+    </div>
+</section>

@@ -1,0 +1,17 @@
+---
+import IndexLayout from "../../layouts/indexLayout.astro";
+import SeccionsShow from "../../components/seccionsShow.astro";
+import Headerprincipal from "../../components/Headerprincipal.astro";
+import PageTitle from "../../components/PageTitle.astro";
+
+---
+<IndexLayout titlePage="Blog">
+    <Headerprincipal />
+    <main class="container my-0 mx-auto">
+        <PageTitle title="Categories"/>
+        <div class="  grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2  mx-auto px-10 ">
+            <SeccionsShow/>
+        </div>
+    </main>
+
+</IndexLayout>

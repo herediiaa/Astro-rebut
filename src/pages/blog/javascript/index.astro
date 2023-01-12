@@ -1,0 +1,13 @@
+---
+import IndexLayout from "../../../layouts/indexLayout.astro";
+import Headerprincipal from "../../../components/Headerprincipal.astro";
+import PageTitle from "../../../components/PageTitle.astro";
+import ContentPosts from "../../../components/ContentPosts.astro";
+---
+<IndexLayout titlePage="Javascript">
+    <Headerprincipal/>
+    <PageTitle title="JavaScrip Posts "/>
+    <main class="p-3">
+        <ContentPosts dato="javascript"/>
+    </main>
+</IndexLayout>

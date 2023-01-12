@@ -1,0 +1,43 @@
+---
+interface Props {
+  variable: string;
+  dato?: string
+}
+const { variable , dato} = Astro.props;
+
+const posts = await Astro.glob("../pages/blog/posts/*.md");
+
+/* seleciono los posts por la tecnologia que indiquen en la llamada */
+/* dato = python javascript go x x x  */
+const entradasGlobales = posts
+  .map((post) => post)
+  .filter((entrada) => entrada.frontmatter.type == dato)
+
+/* veriffico fijandome su type en la terminal */
+console.log(entradasGlobales.map((entrada)=>entrada.frontmatter.type))
+
+/* seleciono los post */
+entradasGlobales.map((entrada)=> console.log(entrada.frontmatter.tags))
+
+const entradas = entradasGlobales
+  .map((post) => post)
+  .filter((entrada) => entrada.frontmatter.tags == variable);
+  
+/* console.log(entradas.map((entrada) => entrada.frontmatter)); */
+---
+
+{
+  entradas.map((entrada) => (
+
+    <hr>
+    <article class="p-2 text-white flex justify-center">
+        <div>
+            <a class=" text-2xl hover:text-gray-900" href={entrada.url}>{entrada.frontmatter.title} </a>
+            <p>{entrada.frontmatter.date}</p>
+        </div>
+        <a href={entrada.url}><svg    xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"  style=" fill: white;transform: ;msFilter:;"><path  d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg></a>
+    </article>
+    <hr >
+  ))
+}
+

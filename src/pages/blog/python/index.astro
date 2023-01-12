@@ -1,0 +1,14 @@
+---
+import Headerprincipal from "../../../components/Headerprincipal.astro";
+import PageTitle from "../../../components/PageTitle.astro";
+import ContentPosts from "../../../components/ContentPosts.astro";
+import IndexLayout from "../../../layouts/indexLayout.astro";
+
+---
+<IndexLayout titlePage="Python">
+    <Headerprincipal/>
+    <PageTitle title="Python Posts"/>
+    <main class="p-3">
+        <ContentPosts dato="python" />
+    </main>
+</IndexLayout>

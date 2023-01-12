@@ -1,0 +1,26 @@
+---
+
+import Button from "../components/Button.astro";
+import Headerprincipal from "../components/Headerprincipal.astro";
+import PageTitle from "../components/PageTitle.astro";
+
+import IndexLayout from "./indexLayout.astro";
+import '../css/base.css'
+const { frontmatter } = Astro.props;
+
+
+---
+<IndexLayout titlePage="Post">
+  <Headerprincipal />
+  <PageTitle title={frontmatter.title} />
+  <div class="flex justify-center gap-x-10">
+    <h3 class="font-bold text-xl text-white">{frontmatter.author}</h3>
+    <h3 class="font-bold text-xl text-white">{frontmatter.date}</h3>
+  </div>
+  <main class="p-3 mt-10">
+    <div class="container rounded-lg bg-slate-700 mx-auto p-5">
+      <slot />
+    </div>
+  </main>
+
+</IndexLayout>

@@ -32,6 +32,7 @@ Inside of AstroPaper, you'll see the following folders and files:
 │   ├── assets/
 │   │   └── logo.png
 │   │   └── undrawpic.svg
+│   │   └── undrawpic2.svg
 │   ├── components/
 │   ├── contents/
 │   │   └── Button.astro

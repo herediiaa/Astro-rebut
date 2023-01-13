@@ -1,9 +1,24 @@
 ---
 import IndexLayout from "../../layouts/indexLayout.astro";
 import Headerprincipal from "../../components/Headerprincipal.astro";
-
+import Image from "../../assets/undrawpic2.svg"
+import PageTitle from "../../components/PageTitle.astro";
 ---
 <IndexLayout titlePage="About">
     <Headerprincipal />
-    <h1>About Page</h1>
+    <main class="p-3">
+        <PageTitle  title="About Page"/>
+        <div class="grid grid-cols-1 md:grid-cols-2 mt-5 gap-5 container mx-auto">
+            <div class="flex-1">
+                <h2 class="text-3xl capitalize text-white mb-2 font-bold">this Web site</h2>
+                <p class="text-slate-600 text-lg">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus maiores corporis voluptates, debitis commodi accusamus magni asperiores facilis repellat, ab labore ratione porro sint ullam rem illum consectetur quod assumenda optio ex aperiam amet laborum. Soluta harum minima reprehenderit similique esse cum praesentium, maxime vero fugit repellendus nulla, illum voluptas a accusantium eius dolorum quas repellat voluptatum ab dolor autem sapiente? Sequi ducimus odio, recusandae modi porro totam impedit odit sint corrupti cum esse suscipit ad error consequatur animi obcaecati ipsam doloribus ex commodi eaque. Qui aut sit fugit at voluptatem numquam praesentium, necessitatibus laborum, dolorem perspiciatis maxime quidem minima.
+                </p>
+            </div>
+            
+            <img class="w-80 md:w-96 flex-1 mx-auto my-auto" src={Image} alt="imagen">
+        </div>
+    </main>
+
+
 </IndexLayout>
